@@ -5,7 +5,7 @@ from PyPDF2 import PdfFileReader, PdfFileMerger
 
 # pdf merger function
 def pyMerger(directory):
-    pdfFiles = [f for f in os.listdir(directory) if f.endswith("pdf")]
+    pdfFiles = [f for f in os.listdir(directory) if f.lower().endswith("pdf")]
     merger = PdfFileMerger()
 
     if pdfFiles != []:  # check if directory has pdf files in it
